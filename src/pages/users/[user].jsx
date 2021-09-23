@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image'
 import { useRouter } from "next/router";
 import { Title } from "../../components/Title";
 
@@ -28,6 +29,7 @@ const User = ({ user }) => {
       <div>
         <strong>Phone:</strong> {user.phone}
       </div>
+      <Image src={`/images/${user.id}.jpg`} alt={user.username} width={"500"} height={"400"} />
     </>
   );
 };
